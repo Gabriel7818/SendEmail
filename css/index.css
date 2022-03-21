@@ -1,0 +1,10 @@
+fieldset{
+    margin-top: 15px;
+     border: 1px dotted #666;
+      padding: 10px;
+       border-radius: 10px;
+}
+
+body{
+    color: #000000;
+}

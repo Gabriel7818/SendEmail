@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>28 Send Email</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Send Email</title>
 </head>
 <body>
+    <div class="container">
     <form action="https://formsubmit.co/Gabriel.Damasceno7818@outlook.com.br" method="POST">
-        <input type="text" name="name" required placeholder="Nome">
-        <br>
-        <input type="email" name="email" required placeholder="Email">
-        <br>
-        <textarea name="message" placeholder="Mensagem..." cols="100" rows="10"></textarea>
-
-        <button type="submit">Enviar</button>
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/28_sendemail/success.html">
+        <input type="hidden" name="_autoresponse" value="E-mail recebido com sucesso ! Obrigado por entrar em contato, em breve retornaremos...">
+        <fieldset>
+            <legend>Formulário de Contrato</legend>
+            <div class="mb-3 mt-3 ml-3">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" name="name" required placeholder="Nome Completo">
+              </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" required placeholder="Nome@exemplo.com">
+              </div>
+              <div class="mb-3">
+                <label for="assunto" class="form-label">Assunto</label>
+                <input type="text" class="form-control" name="assunto" id="assunto" required placeholder="Qual é assunto do E-mail ?">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="message" name="message" rows="5" cols="100" required placeholder="Digite sua mensagem..."></textarea>
+              </div>            
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </fieldset>
    </form>
+</div>
 </body>
 </html>
